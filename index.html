@@ -16,29 +16,21 @@
 </head>
 
 <body>
-    <div class="container header">
+    <div class="jumbotron jumbotron-fluid">
         <h1 class="display-3">Psychic Game</h1>
+        <hr>
         <p>
-            You have <span id="CHANCE">3</span> chances left to guess the letter
+            You have <span id="CHANCE"></span> chances left to guess the letter
         </p>
         <button onClick = "this.style.visibility='hidden';" id="STARTGAME" class="btn btn-primary btn-lg startButn">START GAME</button>
         <br><br>
     </div>
 
     <div class="row">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h2 class="guessWord"><span id = "WORD">_</span></h2>
-            </div>
-        </div>
-
-        <div class="col-md-12 LETTERBOX"><span id = "LETTERSUSED">LETTERS USED</span></div>
-        </div>
-
-        <div class="col-md-12 spacer"></div>
-        <div class="col-md-12 spacer"></div>
-        <div class="col-md-12 spacer"></div>
-
+        <div id="image-area"></div>
+        <h3>LETTERS USED</h3>
+        <div class="col-md-12 LETTERBOX"><textarea rows="4" cols="50"  id = "LETTERSUSED">LETTERS USED</textarea ></div>
+    </div>
         <div class="col-md-2">
             <div class="col-md-1 wins">
                 Wins: <span id="WINS"></span>

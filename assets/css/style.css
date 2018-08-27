@@ -11,13 +11,15 @@
 }
 
 .wins {
-    border: solid 2px black;
-    width: 50%;
+    border: solid 1px black;
+    width: 200px;
+    color: green;
 }
 
 .losses {
-    border: solid 2px black;
-    width: 50%;
+    border: solid 1px black;
+    width: 200px;
+    color:red;
 
 }
 
@@ -29,10 +31,13 @@
 }
 #LETTERSUSED {
     text-align: center;
-    border: solid 2px black;
-    width: 100%;
-    height: 100px;
+    border: solid 1px black;
+    width: 400px;
+    height: 50px;;
     text-align: center;
+    color: red;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 .jumbotron {
@@ -42,4 +47,24 @@
 
 .spacer {
     height: 20px;
+}
+#image-area {
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
+    height: 400px;
+    width: 400px;
+    background-image: url("./images/question.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.jumbotron {
+    background: lightskyblue;
+}
+
+hr {
+    width: 400px;
+}
+h3 {
+    text-align: center;
 }
