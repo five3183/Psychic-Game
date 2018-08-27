@@ -13,7 +13,7 @@ $("body").on("click", "#STARTGAME", function() {
 
 function startGame() {
     var letter = letters[Math.floor(Math.random() * letters.length)];
-    // console.log(letter)
+    console.log(letter)
     document.getElementById("CHANCE").innerHTML = chances; 
     lettersUsed.splice(0);
     document.getElementById("LETTERSUSED").innerHTML = lettersUsed;
@@ -36,6 +36,7 @@ function checkGuess(guess, letter){
         document.getElementById("WINS").innerHTML = wins;
         alert("You Win!  The letter was " + letter);
         chances = 10
+        lettersUsed = []
         startGame();
         }
     else {
@@ -43,16 +44,13 @@ function checkGuess(guess, letter){
         document.getElementById("LETTERSUSED").innerHTML = lettersUsed;
         chances -= 1;
         document.getElementById("CHANCE").innerHTML = chances;
-        checkChances()
-    }
-}
-
-function checkChances() {
-    if (chances === 0) {
-        losses += 1;
-        document.getElementById("LOSSES").innerHTML = losses;
-        alert("You Lose! The letter was " + letter);
-        chances = 10
-        startGame();
+        if (chances === 0) {
+            losses += 1;
+            document.getElementById("LOSSES").innerHTML = losses;
+            alert("You Lose! The letter was " + letter);
+            chances = 10
+            lettersUsed = []
+            startGame();
+        }
     }
 }
